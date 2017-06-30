@@ -1,0 +1,20 @@
+package test.webCrawlerM;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import redis.clients.jedis.*;
+
+public class redisTest {
+
+	public static void main(String[] args) {
+		// 连接本地的 Redis 服务
+
+		Jedis jedis = new Jedis("localhost");
+		// jedis.sadd("foo", "bar");
+		// String value = jedis.get("foo");
+		jedis.set("longtest", "{name: leto, planet: dune, likes: [spice]}");
+		jedis.smembers("test");
+	}
+}

@@ -1,0 +1,50 @@
+package test.webCrawlerM;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+public class Allin1Test {
+	
+	public static boolean getModifyDate(String frontURL) {
+		URL u = null;
+		HttpURLConnection http = null;
+		try {
+		u = new URL(frontURL);
+		http = (HttpURLConnection) u.openConnection();
+		http.setRequestMethod("HEAD");
+		} catch (MalformedURLException e) {
+		// DO Auto-generated catch block
+		e.printStackTrace();
+		} catch (IOException e) {
+		// DO Auto-generated catch block
+		e.printStackTrace();
+		}
+		Date lastModify = new Date(http.getLastModified());
+		Date anotherdate=new Date();
+		//System.out.println(date.toLocaleString());
+        int a=lastModify.compareTo(anotherdate);
+        System.out.println(lastModify.toLocaleString());
+        System.out.println(anotherdate.toLocaleString());
+        System.out.println(a);
+
+		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		//SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+		//String date = sdf.format(lastModify);
+		if(a<0){
+			return true;//
+			}
+		return false;
+		}
+	
+	public static void main(String []args){
+		String s=getModifyDate("http://www.sina.com");
+	
+	}
+}

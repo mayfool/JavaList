@@ -1,0 +1,25 @@
+package test.webCrawlerM;
+
+import java.util.List;
+
+import redis.clients.jedis.*;
+public class redisTest {
+	
+	
+	
+	public static void main(String[] args) {
+	      //连接本地的 Redis 服务
+		
+		Jedis jedis = new Jedis("localhost");
+		//jedis.sadd("foo", "bar");
+		//String value = jedis.get("foo");
+		 Map<String, String> map = new HashMap<String, String>();
+		 52         map.put("name", "xinxin");
+		 53         map.put("age", "22");
+		 54         map.put("qq", "123456");
+		 55         jedis.hmset("user",map);
+		//System.out.println(value);
+		  List<String> rsmap = jedis.hmget("user", "name", "age", "qq");
+		          System.out.println(rsmap); 
+	 }
+}

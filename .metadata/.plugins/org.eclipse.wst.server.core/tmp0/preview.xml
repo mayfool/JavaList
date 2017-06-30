@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server port="8080">
+  <module name="testWeb" path="C:/Users/Forcast1/workspace/newspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/testWeb" type="j2ee"/>
+  <module context="test2" name="test2" path="C:/Users/Forcast1/workspace/newspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/test2" type="j2ee"/>
+</server>

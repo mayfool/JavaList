@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;envrypt.ANDROID.java&apos; to &apos;SimpleCrypto.java&apos;&#x0D;&#x0A;- Original project: &apos;envrypt&apos;&#x0D;&#x0A;- Original element: &apos;envrypt.ANDROID.java&apos;&#x0D;&#x0A;- Renamed element: &apos;envrypt.SimpleCrypto.java&apos;" description="Rename compilation unit &apos;ANDROID.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;envrypt{ANDROID.java" name="SimpleCrypto.java" references="false" stamp="1493898762799" version="1.0"/>
+</session>

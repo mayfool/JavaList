@@ -1,0 +1,61 @@
+package test.webCrawlerM;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import redis.clients.jedis.Jedis;
+
+public class redisOperation {
+	Jedis jedis ;
+	public redisOperation(){
+		jedis= new Jedis("localhost");
+	}
+
+	public  void redisUrlSadd(String url,String status){
+	
+	//	this.jedis.sadd("url"+status, url);
+
+	
+	//String value = jedis.get("foo");
+	//System.out.println(value);
+		jedis.sadd("url:"+status, url);
+	}
+	public void redisUrlSadd(String url){//默认等待处理状态
+		this.redisUrlSadd(url,"wait");
+	}
+	public String redisUrlSpop(String key){
+		return jedis.spop(key);
+	}
+	
+	
+	public void mapAdd(){
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("name", "xinxin");
+		map.put("age", "22");
+		map.put("qq", "123456");
+		jedis.hmset("user", map);
+		// System.out.println(value);
+		List<String> rsmap = jedis.hmget("user", "name", "age", "qq");
+		System.out.println(rsmap);
+	}
+	public void redisMapAdd(String url,String status,String title,Map<String,String> map){
+		jedis.hmset(url, map);
+		long lnow;
+		long lastModified;
+		try{
+			Date now=new Date();
+			
+		    lnow=now.getTime();
+		    lastModify=Long.parseLong(jedis.hget(url, "lastModify"));
+		}
+		catch(Exception e){
+			System.out.println("没有查找到最后修改时间");
+			e.printStackTrace();
+		}
+		if(lnow-lastModify<2000000)
+		
+		
+	}
+}

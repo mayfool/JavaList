@@ -1,0 +1,47 @@
+package myWork;
+class Model {
+    public int i = 0;
+    public String s = "no value";
+}
+
+public class value_reference {
+	public static void changeInt(int i) {// 改变int型变量的函数
+        i = 100;
+    }
+
+    public static void changeString(String s) {// 改变String型变量的函数
+        s = "changeString";
+    }
+
+    public static void changeModel(Model model) {// 改变Model型变量的函数
+        model = new Model();
+        model.i = 1;
+        model.s = "changeModel";
+    }
+
+    public static void changeModel2(Model model) {// 改变Model型变量的成员的函数
+        model.i = 1;
+        model.s = "changeModel";
+    }
+
+    // 类Model
+
+
+    // 测试程序
+    public static void main(String[] args) {
+        int i = 0;
+        String s = "hello";
+        Model model = new Model();
+        Model model2 = new Model();
+
+        changeInt(i);
+        System.out.println("i=" + i);
+        changeString(s);
+        System.out.println("s=" + s);
+        changeModel(model);
+        System.out.println("model:" + model.s);
+        changeModel2(model2);
+        System.out.println("model2:" + model2.s);
+
+    }
+}

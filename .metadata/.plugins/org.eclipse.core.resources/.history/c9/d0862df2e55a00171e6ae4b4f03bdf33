@@ -1,0 +1,61 @@
+package test.webCrawlerM;
+
+import java.util.List;
+import java.util.Set;
+import org.jsoup.*;
+import org.jsoup.nodes.Document;
+import redis.clients.*;
+public class BaseUrl {
+	
+	public static Set<String> baseUrl;
+
+	// public String
+   
+	public static String getUrl() {
+
+		return baseUrl.iterator().next();
+	}
+
+	public static void SearchBaseUrl(String keyWord) {
+		 crawler c=new crawler();
+		 String searchUrl="https://www.baidu.com/s?wd=";
+		 searchUrl+=keyWord;
+         Document d=c.htmlDownload(searchUrl);
+         //System.out.println(d);
+         c.getBaiduUrl(d);
+	}
+
+	public static void addUrl(String url) {
+
+		baseUrl.add(url);
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String [] args){
+		
+		
+		
+		BaseUrl bs=new BaseUrl();
+		bs.SearchBaseUrl("你好疯子");
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

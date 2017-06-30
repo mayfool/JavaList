@@ -1,0 +1,12 @@
+package test.webCrawlerM;
+
+import redis.clients.jedis.Jedis;
+
+public class redisTest {
+	public static void main(String[] args) {
+	      //连接本地的 Redis 服务
+		jedis = new Jedis("192.168.0.100", 6379);
+		 20         //权限认证
+		 21         jedis.auth("admin");
+	 }
+}

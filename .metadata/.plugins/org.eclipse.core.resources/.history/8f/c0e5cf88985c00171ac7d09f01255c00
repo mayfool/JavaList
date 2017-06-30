@@ -1,0 +1,23 @@
+package test.webCrawlerM;
+
+public class Allin1Test {
+	public static String getModifyDate(String frontURL) {
+		URL u = null;
+		HttpURLConnection http = null;
+		try {
+		u = new URL(frontURL);
+		http = (HttpURLConnection) u.openConnection();
+		http.setRequestMethod("HEAD");
+		} catch (MalformedURLException e) {
+		// DO Auto-generated catch block
+		e.printStackTrace();
+		} catch (IOException e) {
+		// DO Auto-generated catch block
+		e.printStackTrace();
+		}
+
+	
+	public static void main(String []args){
+		
+	}
+}

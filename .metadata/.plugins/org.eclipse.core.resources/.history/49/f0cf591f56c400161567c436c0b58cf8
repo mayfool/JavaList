@@ -1,0 +1,42 @@
+package com.dy.bulletscreen.app;
+
+import com.dy.bulletscreen.client.DyBulletScreenClient;
+import com.dy.bulletscreen.utils.KeepAlive;
+import com.dy.bulletscreen.utils.KeepGetMsg;
+
+/**
+ * @summary: 瀵懓绠稤emo缁嬪绨崥顖氬З缁拷 
+ * @author: FerroD     
+ * @date:   2016-3-12   
+ * @version V1.0
+ */
+public class DyBulletScreenApplication
+{
+	//鐠佸墽鐤嗛棁锟界憰浣筋問闂傤喚娈戦幋鍧楁？ID娣団剝浼�
+	private static final int roomId = 67373;
+	private static final int date=1216;
+	
+	//瀵懓绠峰Ч鐘插瀻缂佸嫬褰块敍灞炬崳闁插繑膩瀵繋濞囬悽锟�-9999
+	private static final int groupId = -9999;
+	public static int getroomId(){
+		return roomId;
+	}
+	public static int getDate(){
+		return date;
+	}
+	public static void main(String[] args)
+	{
+		//閸掓繂顫愰崠鏍ц剨楠炴椀lient
+        DyBulletScreenClient danmuClient = DyBulletScreenClient.getInstance();
+        //鐠佸墽鐤嗛棁锟界憰浣界箾閹恒儱鎷扮拋鍧楁６閻ㄥ嫭鍩ч梻纰擠閿涘奔浜掗崣濠傝剨楠炴洘鐫滈崚鍡欑矋閸欙拷
+        danmuClient.init(roomId, groupId);
+        
+        //娣囨繃瀵斿鐟扮閺堝秴濮熼崳銊ョ妇鐠猴拷
+        KeepAlive keepAlive = new KeepAlive();
+        keepAlive.start();
+        
+        //閼惧嘲褰囧鐟扮閺堝秴濮熼崳銊ュ絺闁胶娈戦幍锟介張澶変繆閹拷
+        KeepGetMsg keepGetMsg = new KeepGetMsg();
+        keepGetMsg.start();
+	}
+}

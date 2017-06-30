@@ -1,0 +1,142 @@
+import java.awt.Color;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Scanner;
+
+import javax.swing.*;
+
+
+class paintSort extends JFrame implements ActionListener{
+    JPanel p1=new JPanel();
+	JTextArea t1=new JTextArea(30,30);
+	
+	JTextField t2=new JTextField(30);
+	JTextField t3=new JTextField(30);
+	
+	
+	JLabel L1=new JLabel("输入要排序的数字，数字间用空格隔开");
+	JLabel L2=new JLabel("排序复杂度");
+	
+	JButton b1=new JButton("开始");
+	JButton b2=new JButton("排行榜");
+	
+	
+	
+	public paintSort(){
+		super("排序界面");
+		Container c=this.getContentPane();
+		t2.setForeground(Color.blue);//被忽略了
+		t2.setEditable(false);
+		
+		
+		p1.setLayout(null);
+		t1.setBounds(100, 400,600,250);
+		L1.setBounds(100,50,400,30);
+		b1.setBounds(100,350,100,30);   //冒泡排序
+		b2.setBounds(600,350, 100, 30);//插入排序
+		
+		t2.setBounds(100,100,600,250);
+		t2.setBackground(Color.white);
+		
+		//L2.setBounds(230,180,100,30);
+		
+		
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		
+		
+		p1.add(t1);
+		p1.add(L1);
+		p1.add(b1);
+		p1.add(t2);
+		p1.add(b2);
+		
+		p1.add(t3);
+		p1.add(L2);
+		c.add(p1);
+		
+		
+		
+		
+		
+		this.setLocation(200, 100);
+		this.setSize(1000, 800);
+		setVisible(true);
+	}
+	
+	
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		try{
+			 String str= fileTest.readFileByChars("D:/sk.txt");
+			if(e.getSource()==b1){
+				
+				
+				t2.setText(str);
+			}
+			if(e.getSource()==b2){
+			
+			    t2.setText("插入排序");
+			}
+			
+			
+		}
+		catch(Exception ex){
+			
+		}
+		
+	}
+
+
+	
+	
+}
+public class client {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+/*
+		System.out.println("Enter the length of the array");
+		int arrayLength = sc.nextInt();
+		int[] array = new int[arrayLength];
+		System.out.println("Enter the array one by one");
+		for (int i = 0; i < arrayLength; i++) {
+           array[i]=sc.nextInt();
+		}
+
+		for(int i=0;i<arrayLength;i++){
+			System.out.println(array[i]);
+			
+		}
+		
+		System.out.println("1 for BubbleSort,2 for InsertSort");
+		int SortNumber=sc.nextInt();*/
+		paintSort ps=new paintSort();
+	    int[] a=new int [3];
+		a[0]=2;
+		a[1]=1;
+		a[2]=3;
+		String[] s=new String[3];
+		for(int i=0;i<3;i++){
+			s[i]=a[i]+"";
+		}
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+	
+	}
+
+}

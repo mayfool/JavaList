@@ -1,0 +1,6 @@
+package webCrawler;
+
+public class BaseUrl {
+public String baseUrl="";
+public String 
+}

@@ -1,0 +1,15 @@
+package webCrawler;
+
+import java.util.List;
+
+public class BaseUrl {
+public List<String> baseUrl;
+
+
+baseUrl.get(1);
+public static int index=0;
+//public String 
+public String getUrl(){
+	return baseUrl.get(index);
+}
+}

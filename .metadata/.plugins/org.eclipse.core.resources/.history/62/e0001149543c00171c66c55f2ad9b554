@@ -1,0 +1,31 @@
+package regex;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class shuzuquchong {
+	
+	public static int [] selectTheOne(int[] args){
+		
+		Set<Integer> set=new HashSet<>();
+        for(int i=0;i<args.length;i++){
+        	
+        	set.add(args[i]);
+        	
+        }
+        int []a=new int[set.size()];
+        int j=0;
+        for(Integer i:set){
+               a[j++]=i;
+        }
+        return a;
+	}
+	
+  public static void main(String[] args){
+	  
+	  
+	  
+	  
+  }
+  
+}

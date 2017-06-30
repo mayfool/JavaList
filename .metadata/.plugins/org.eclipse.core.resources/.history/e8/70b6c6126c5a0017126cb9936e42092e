@@ -1,0 +1,32 @@
+package webCrawler;
+
+import java.util.List;
+import java.util.Set;
+
+public class BaseUrl {
+public static Set<String> baseUrl;
+
+//  public String 
+
+
+
+   public static String getUrl(){
+	
+	
+	return baseUrl.iterator().next();
+}
+    public static void SearchBaseUrl(){
+	
+	
+	
+}
+public static void addUrl(String url){
+	
+	
+	
+	baseUrl.add(url);
+ 
+}
+
+
+}
