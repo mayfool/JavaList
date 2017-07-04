@@ -5,12 +5,15 @@ import java.util.List;
 import java.util.Map;
 
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
 
 public class redisOperation {
+	JedisPool pool=new JedisPool(new JedisPoolConfig(),"localhost");
 	Jedis jedis ;
 	//JedisPool jp=new JedisPool();
 	public redisOperation(){
-		jedis= new Jedis("localhost");
+		jedis= pool.getResource();
 	}
     public String  hget(String key,String field){
     	return jedis.hget(key, field);

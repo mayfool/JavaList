@@ -37,16 +37,21 @@
 <fullyQualifiedTypeName name="java.rmi.registry.LocateRegistry"/>
 <fullyQualifiedTypeName name="org.jsoup.select.Elements"/>
 <fullyQualifiedTypeName name="org.jsoup.nodes.Element"/>
-<fullyQualifiedTypeName name="redis.clients.jedis.Jedis"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
 <fullyQualifiedTypeName name="java.net.MalformedURLException"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
-<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="redis.clients.jedis.Jedis"/>
+<fullyQualifiedTypeName name="redis.clients.jedis.JedisPool"/>
+<fullyQualifiedTypeName name="redis.clients.jedis.JedisPoolConfig"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="redis.clients.jedis.JedisPool"/>
+<fullyQualifiedTypeName name="javax.xml.xpath.XPathFactory"/>
+<fullyQualifiedTypeName name="javax.xml.xpath.XPath"/>
+<fullyQualifiedTypeName name="us.codecraft.xsoup.Xsoup"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
 </qualifiedTypeNameHistroy>

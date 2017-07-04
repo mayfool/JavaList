@@ -1,0 +1,10 @@
+package test.webCrawlerM;
+
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathFactory;
+import Jsoup;
+public class XpathTest {
+	String html = Jsoup.connect(url).post().html();
+	XPathFactory xPathFactory = XPathFactory.newInstance();
+	XPath xPath = xPathFactory.newXPath();
+}

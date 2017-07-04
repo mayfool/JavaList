@@ -1,0 +1,24 @@
+package test.webCrawlerM;
+
+import java.io.IOException;
+import org.htmlcleaner.*;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathFactory;
+import org.jsoup.*;
+public class XpathTest {
+	public static void main(String [] args) throws IOException, XPatherException{
+	@SuppressWarnings("restriction")
+	String html =  Jsoup.connect("http://www.cnblogs.com/zyw-205520/").get().html();
+	XPathFactory xPathFactory = XPathFactory.newInstance();
+	XPath xPath = xPathFactory.newXPath();
+	
+	String url = "http://zhidao.baidu.com/daily";
+	String contents = Jsoup.connect(url).post().html();
+
+	HtmlCleaner hc = new HtmlCleaner();
+	TagNode tn = hc.clean(contents);
+	String xpath = "//h2/a/@href";
+	Object[] objects = tn.evaluateXPath(xpath);
+	System.out.println(objects.length);
+	}
+}

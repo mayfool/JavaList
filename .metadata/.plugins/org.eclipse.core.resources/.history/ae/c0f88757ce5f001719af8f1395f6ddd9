@@ -1,0 +1,11 @@
+package test.webCrawlerM;
+
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathFactory;
+import org.jsoup.*;
+public class XpathTest {
+	@SuppressWarnings("restriction")
+	String html =   doc = Jsoup.connect("http://www.cnblogs.com/zyw-205520/").get();.html();
+	XPathFactory xPathFactory = XPathFactory.newInstance();
+	XPath xPath = xPathFactory.newXPath();
+}

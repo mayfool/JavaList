@@ -1,0 +1,15 @@
+package test.webCrawlerM;
+
+import java.io.IOException;
+import htmlcleaner;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathFactory;
+import org.jsoup.*;
+public class XpathTest {
+	public static void main(String [] args) throws IOException{
+	@SuppressWarnings("restriction")
+	String html =  Jsoup.connect("http://www.cnblogs.com/zyw-205520/").get().html();
+	XPathFactory xPathFactory = XPathFactory.newInstance();
+	XPath xPath = xPathFactory.newXPath();
+	}
+}

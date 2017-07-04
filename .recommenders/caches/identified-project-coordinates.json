@@ -1,1 +1,1 @@
-[[{"location":"C:\\Users\\Forcast1\\workspace\\newspace\\webCrawlerM","type":"PROJECT","hints":{"PROJECT_NAME":"webCrawlerM"}},"test:webCrawlerM:0.0.1"],[{"location":"C:\\Users\\Forcast1\\.m2\\repository\\redis\\clients\\jedis\\2.9.0\\jedis-2.9.0.jar","type":"JAR","hints":{}},"redis.clients:jedis:2.9.0"]]
+[[{"location":"C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\lib\\ext\\jsoup-1.10.3.jar","type":"JAR","hints":{}},"org.jsoup:jsoup:1.10.3"]]
