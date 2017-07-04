@@ -71,7 +71,7 @@ public class XpathTest {
 		
 		
 		
-		return value;
+		return true;
 		
 	}
 	

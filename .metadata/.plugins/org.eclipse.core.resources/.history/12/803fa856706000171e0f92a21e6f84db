@@ -35,7 +35,7 @@ public class XpathTest {
 
     Document document = Jsoup.parse(html2);
 
-    String result = Xsoup.compile("//b/@mf").evaluate(document).get();
+    String result = Xsoup.compile("//a/@mf").evaluate(document).get();
     if(result==null){
     	System.out.println("null");
     }
@@ -50,30 +50,11 @@ public class XpathTest {
 	}
 	
 	
-	public int XpathTestOne(Document doc,String xPath){
+	public boolean XpathTests(Document doc,String xPath){
 		String result=Xsoup.compile(xPath).evaluate(doc).get();
-		if(result==null||result=="")
-		 return 0;
-		
-		return 1;
+		return true;
 		
 		
 		
 	}
-	
-	public String XpathTests(Document doc,String []xpaths){
-		int length=xpaths.length;
-		String value="";
-		for(int i=0;i<length;i++){
-			value+=XpathTestOne(doc,xpaths[i]);
-			
-		}
-		
-		
-		
-		return value;
-		
-	}
-	
-	
 }
